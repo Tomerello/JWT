@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 
 router.post('/getjwt', (req, res) => {
     jwt.sign(req.body, process.env.TOKEN_SECRET, {
-        expiresIn: '15s'
+        expiresIn: '1h'
     }, (err, token) => {
         if(err){
 
